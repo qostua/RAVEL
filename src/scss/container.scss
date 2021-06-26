@@ -1,9 +1,7 @@
-@import "mixins";
-@import "variables";
-
 .container {
   box-sizing: border-box;
-  max-width: ;
+  max-width: 1680px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 10px;
 }
