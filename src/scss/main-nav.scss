@@ -1,0 +1,16 @@
+.main-nav__site-list {
+  display: flex;
+
+  margin-bottom: 5px;
+
+  gap: 64px;
+  justify-content: center;
+}
+.main-nav__site-item {
+
+}
+.main-nav__link {
+  padding: 5px;
+
+  @include active;
+}
