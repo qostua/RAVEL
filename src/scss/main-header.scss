@@ -1,3 +1,44 @@
 .main-header {
+  display: grid;
 
+  grid-template-columns: 300px 1fr 300px;
+  align-items: center;
+  @include title-font;
+  @include font(18px, 24px);
+}
+.main-header__user-list {
+  display: flex;
+
+  margin-bottom: 5px;
+
+  justify-content: flex-end;
+  gap: 15px;
+}
+.main-header__user-item--user {
+  padding-right: 20px;
+
+  border-right: 1px solid #F1E0DD;
+}
+.main-header__link {
+  position: relative;
+
+  padding-left: 29px;
+  &::before {
+    position: absolute;
+  }
+  &--user::before {
+    bottom: -3px;
+    left: -2px;
+
+    content: url("../img/user-icon.svg");
+  }
+  &--search::before {
+    bottom: -2px;
+    left: 0;
+
+    content: url("../img/search-icon.svg");
+  }
+}
+.main-header__link--search {
+  padding-left: 20px;
 }
