@@ -1,8 +1,16 @@
-@mixin #-font {
-  font-family: "", "", serif;
+@mixin title-font {
+  font-family: "NotoSerif", "Georgia", serif;
 }
-@mixin #-font {
-  font-family: "", "", sans-serif;
+@mixin text-font {
+  font-family: "ProductSans", "Arial", sans-serif;
+}
+@mixin text {
+  color: $brown-light;
+
+  font-family: "ProductSans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
 }
 @mixin font($size, $height: $size) {
   font-size: $size;
