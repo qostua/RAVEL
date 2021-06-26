@@ -16,6 +16,14 @@
   font-size: $size;
   line-height: $height;
 }
+@mixin active {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
 @mixin font-face($font-family, $url, $weight) {
 	@font-face {
 		font-family: '#{$font-family}';
