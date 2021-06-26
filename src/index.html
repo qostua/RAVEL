@@ -35,8 +35,8 @@
         <form class="promo__form" action="https://echo.htmlacademy.ru/courses" method="post">
           <h3 class="visually-hidden">Purchase Form</h3>
           <p class="promo__input-wrap">
-            <label for="promo-form-destinations" class="promo__input-label">Destinations</label>
-            <select class="promo__select form-select input" name="destinations" id="promo-form-destinations">
+            <label for="promo-form-top-destinations" class="promo__input-label">top-destinations</label>
+            <select class="promo__select form-select input" name="top-destinations" id="promo-form-top-destinations">
               <option value="arab-egypt">Arab Egypt</option>
               <option value="spain">Spain</option>
             </select>
@@ -81,38 +81,38 @@
         </ul>
       </section>
 
-      <section class="destinations">
+      <section class="top-destinations">
         <div class="container">
-          <h2 class="destinations__title title">Top Destinations In The World</h2>
-          <p class="destinations__text">It is a long established fact that a reader will be the distracted by the readable content of a page when looking at its layout from it.</p>
+          <h2 class="top-destinations__title title">Top top-destinations In The World</h2>
+          <p class="top-destinations__text">It is a long established fact that a reader will be the distracted by the readable content of a page when looking at its layout from it.</p>
 
-          <ul class="destinations__list">
-            <li class="destinations__item">
+          <ul class="top-destinations__list">
+            <li class="top-destinations__item">
               <picture>
                  <source type="image/webp" srcset="img/city-cuba@1x.webp, img/city-cuba@2x.webp 2x">
 
-                 <img class="destinations__item-img" src="img/city-cuba@1x.jpg" srcset="img/city-cuba@2x.jpg 2x" alt="Cuba City" width="330" height="400">
+                 <img class="top-destinations__item-img" src="img/city-cuba@1x.jpg" srcset="img/city-cuba@2x.jpg 2x" alt="Cuba City" width="330" height="400">
               </picture>
               <p class="visually-hidden">Cuba City</p>
             </li>
-            <li class="destinations__item">
+            <li class="top-destinations__item">
               <picture>
                  <source type="image/webp" srcset="img/city-paris@1x.webp, img/city-paris@2x.webp 2x">
 
-                 <img class="destinations__item-img" src="img/city-paris@1x.jpg" srcset="img/city-paris@2x.jpg 2x" alt="Paris" width="330" height="400">
+                 <img class="top-destinations__item-img" src="img/city-paris@1x.jpg" srcset="img/city-paris@2x.jpg 2x" alt="Paris" width="330" height="400">
               </picture>
               <p class="visually-hidden">Paris</p>
             </li>
-            <li class="destinations__item">
+            <li class="top-destinations__item">
               <picture>
                  <source type="image/webp" srcset="img/city-japan@1x.webp, img/city-japan@2x.webp 2x">
 
-                 <img class="destinations__item-img" src="img/city-japan@1x.jpg" srcset="img/city-japan@2x.jpg 2x" alt="Japan" width="330" height="400">
+                 <img class="top-destinations__item-img" src="img/city-japan@1x.jpg" srcset="img/city-japan@2x.jpg 2x" alt="Japan" width="330" height="400">
               </picture>
               <p class="visually-hidden">Japan</p>
             </li>
           </ul>
-          <a href="#" class="destinations__more-btn btn">Discover More</a>
+          <a href="#" class="top-destinations__more-btn btn">Discover More</a>
         </div>
       </section>
 
@@ -137,6 +137,60 @@
             <h3 class="tour__item-title">24/7 Strong Customer Support</h3>
           </li>
         </ul>
+      </section>
+
+      <section class="choose-destination">
+        <h2 class="choose-destination__title title">Choose Your Destination</h2>
+
+        <ul class="choose-destination__list">
+          <li class="choose-destination">
+            <picture>
+               <source type="image/webp" srcset="img/place-sun@1x.webp, img/place-sun@2x.webp 2x">
+
+               <img class="choose-destination__img" src="img/place-sun@1x.jpg" srcset="img/place-sun@2x.jpg 2x" alt="Sun And Road" width="450" height="535">
+            </picture>
+            <div class="choose-destination__item-info">
+              <h3 class="choose-destination__item-title">Santorini, Oia Greece</h3>
+              <div class="choose-destination__item-inner">
+                <p class="choose-destination__item-price">$2000</p>
+                <p class="choose-destination__item-reviews">5k Reviews</p>
+              </div>
+              <button class="choose-destination__item-btn btn" aria-label="add">+</button>
+            </div>
+          </li>
+          <li class="choose-destination">
+            <picture>
+               <source type="image/webp" srcset="img/place-lighthouse@1x.webp, img/place-lighthouse@2x.webp 2x">
+
+               <img class="choose-destination__img" src="img/place-lighthouse@1x.jpg" srcset="img/place-lighthouse@2x.jpg 2x" alt="Lighthouse" width="450" height="535">
+            </picture>
+            <div class="choose-destination__item-info">
+              <h3 class="choose-destination__item-title">Santorini, Oia Greece</h3>
+              <div class="choose-destination__item-inner">
+                <p class="choose-destination__item-price">$2000</p>
+                <p class="choose-destination__item-reviews">5k Reviews</p>
+              </div>
+              <button class="choose-destination__item-btn btn" aria-label="add">+</button>
+            </div>
+          </li>
+          <li class="choose-destination">
+            <picture>
+               <source type="image/webp" srcset="img/place-house@1x.webp, img/place-house@2x.webp 2x">
+
+               <img class="choose-destination__img" src="img/place-house@1x.jpg" srcset="img/place-house@2x.jpg 2x" alt="China House" width="450" height="535">
+            </picture>
+            <div class="choose-destination__item-info">
+              <h3 class="choose-destination__item-title">Santorini, Oia Greece</h3>
+              <div class="choose-destination__item-inner">
+                <p class="choose-destination__item-price">$2000</p>
+                <p class="choose-destination__item-reviews">5k Reviews</p>
+              </div>
+              <button class="choose-destination__item-btn btn" aria-label="add">+</button>
+            </div>
+          </li>
+        </ul>
+
+        <button class="choose-destination__view-btn btn">View All Places</button>
       </section>
     </main>
 
