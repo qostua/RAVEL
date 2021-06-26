@@ -1,0 +1,21 @@
+@mixin #-font {
+  font-family: "", "", serif;
+}
+@mixin #-font {
+  font-family: "", "", sans-serif;
+}
+@mixin font($size, $height: $size) {
+  font-size: $size;
+  line-height: $height;
+}
+@mixin font-face($font-family, $url, $weight) {
+	@font-face {
+		font-family: '#{$font-family}';
+		font-weight: #{$weight};
+		font-style: normal;
+
+		src: url('../fonts/#{$url}.woff2') format('woff2'),
+		url('../#{$url}.woff') format('woff');
+		font-display: swap;
+	}
+}
