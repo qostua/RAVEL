@@ -16,12 +16,11 @@ const webp = require('gulp-webp');
 
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const fs = require('fs');
 
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const uglify = require('gulp-uglify-es').default;
-
-
 
 const svgSprites = () => {
 	return src('./src/img/icon-*.svg')
@@ -119,6 +118,30 @@ const fonts = () => {
 	.pipe(ttf2woff2())
 	.pipe(dest('./app/fonts'))
 }
+
+const cb = () => {}
+let srcFonts = './src/scss/font.scss';
+let appFonts = './app/fonts/';
+const fontsStyle = (done) => {
+	let file_content = fs.readFileSync(srcFonts);
+
+	fs.writeFile(srcFonts, '', cb);
+	fs.readdir(appFonts, function (err, items) {
+		if (items) {
+			let c_fontname;
+			for (var i = 0; i < items.length; i++) {
+				let fontname = items[i].split('.');
+				fontname = fontname[0];
+				if (c_fontname != fontname) {
+					fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", 400);\r\n', cb);
+				}
+				c_fontname = fontname;
+			}
+		}
+	})
+
+	done();
+}
 const watchFiles = () => {
   browserSync.init({
         server: {
@@ -132,17 +155,18 @@ const watchFiles = () => {
     watch('./src/scss/**/*.scss', styles);
     watch('./src/index.html', htmlInclude);
     watch('./src/img/**.{jpg,png,svg}', imgToApp);
+		watch('./src/img/**.{jpg,png}', convertWebp);
     watch('./src/img/**.svg', svgSprites);
 		watch('./src/resources/**', resources);
 		watch('./src/fonts/**.{ttf,woff,woff2}', fonts);
+		watch('./src/fonts/**.{ttf,woff,woff2}', fontsStyle);
 		watch('./src/js/**/*.js', scripts);
 }
 
 exports.styles = styles;
 exports.watchFiles = watchFiles;
 exports.fileinclude = htmlInclude;
-
-exports.default = series(clean, parallel(htmlInclude, scripts, fonts, imgToApp, convertWebp, svgSprites, resources), styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scripts, fonts, imgToApp, convertWebp, svgSprites, resources), fontsStyle, styles, watchFiles);
 
 const stylesBuild = () => {
   return src('./src/scss/main.scss')
@@ -200,4 +224,4 @@ const images = () => {
 		.pipe(dest('./app/img'))
 }
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, imgToApp, convertWebp, svgSprites, resources), stylesBuild, images);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, imgToApp, convertWebp, svgSprites, resources), fontsStyle, stylesBuild, images);
