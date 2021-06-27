@@ -1,0 +1,11 @@
+.btn {
+  padding: 17px 41.5px;
+
+  text-decoration: none;
+
+  color: white;
+  background-color: $orange;
+
+  @include title-font;
+  @include font(18px, 25px);
+}
