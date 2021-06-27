@@ -19,3 +19,91 @@
   @include title-font;
   @include font(84px, 112px);
 }
+.promo__form-pag-wrap {
+  display: grid;
+
+  transform: translateY(-50%);
+
+  grid-template-columns: 435px 1fr;
+  gap: 60px;
+  align-items: flex-end;
+}
+.promo__pag {
+  display: flex;
+
+  order: 1;
+}
+.promo__pag-btn--left {
+  margin-right: 20px;
+}
+.promo__pag-number {
+  position: relative;
+
+  margin-bottom: 9px;
+  margin-left: auto;
+
+  color: $orange;
+
+  font-weight: 500;
+
+  @include font(24px, 33px);
+  @include title-font;
+  &::before {
+    position: absolute;
+    right: 57px;
+    bottom: 15px;
+
+    width: 234px;
+
+    content: "";
+
+    border: solid 1px #F5EBE9;
+  }
+}
+.promo__form {
+  display: grid;
+
+  padding: 45px;
+
+  background-color: white;
+  box-shadow: 0px 10px 30px 5px rgba(219, 200, 197, 0.2);
+
+  order: 2;
+  grid-template-columns: 240px 240px 240px 1fr;
+  gap: 60px;
+}
+.promo__input-label {
+  display: block;
+
+  color: $brown-light;
+
+  @include font(16px, 20px);
+}
+.promo__input-wrap--price {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 13px;
+
+    content: "$";
+
+    color: $orange;
+  }
+}
+.promo__input-wrap--date {
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 17px;
+
+    width: 15px;
+    height: 15px;
+
+    content: "";
+
+    background-image: url("../img/calender-icon.svg");
+  }
+}
