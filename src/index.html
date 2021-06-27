@@ -33,32 +33,34 @@
           <p class="promo__slogan">It’s Time To <br> Explore The World</p>
           <a href="#" class="promo__plan-btn btn">Plan Your Trip</a>
         </div>
-        
-        <form class="promo__form" action="https://echo.htmlacademy.ru/courses" method="post">
-          <h3 class="visually-hidden">Purchase Form</h3>
-          <p class="promo__input-wrap">
-            <label for="promo-form-top-destinations" class="promo__input-label">top-destinations</label>
-            <select class="promo__select form-select input" name="top-destinations" id="promo-form-top-destinations">
-              <option value="arab-egypt">Arab Egypt</option>
-              <option value="spain">Spain</option>
-            </select>
-          </p>
-          <p class="promo__input-wrap">
-            <label for="promo-form-date" class="promo__input-label">Check In</label>
-            <input class="promo__date form-date input" type="date" name="date" id="promo-form-date" required>
-          </p>
-          <p class="promo__input-wrap">
-            <label for="promo-form-price" class="promo__input-label">Price Range</label>
-            <input type="text" name="price" id="promo-form-price" value="$500 - $10,0000" required>
-          </p>
-          <button type="submit" name="submit">Discover Now</button>
-        </form>
 
-        <nav class="promo__pag">
-          <button class="promo__pag-btn promo__pag-btn--left promo__pag-btn--disable"><span class="visually-hidden">Previous slide</span></button>
-          <button class="promo__pag-btn promo__pag-btn--right promo__pag-btn--disable"><span class="visually-hidden">Next slide</span></button>
-          <span class="promo__pag-number">03</span>
-        </nav>
+        <div class="promo__form-pag-wrap">
+          <form class="promo__form" action="https://echo.htmlacademy.ru/courses" method="post">
+            <h3 class="visually-hidden">Purchase Form</h3>
+            <p class="promo__input-wrap">
+              <label for="promo-form-top-destinations" class="promo__input-label">Destinations</label>
+              <select class="promo__select form__input form__select" name="top-destinations" id="promo-form-top-destinations">
+                <option value="arab-egypt">Arab Egypt</option>
+                <option value="spain">Spain</option>
+              </select>
+            </p>
+            <p class="promo__input-wrap promo__input-wrap--date">
+              <label for="promo-form-date" class="promo__input-label">Check In</label>
+              <input class="promo__date form__input form__date" type="date" name="date" id="promo-form-date" required>
+            </p>
+            <p class="promo__input-wrap promo__input-wrap--price">
+              <label for="promo-form-price" class="promo__input-label">Price Range</label>
+              <input class="promo__price form__input form__text" type="text" name="price" id="promo-form-price" value="$500 - $10,0000" required>
+            </p>
+            <button class="promo__form-btn btn btn--form" type="submit" name="submit">Discover Now</button>
+          </form>
+
+          <nav class="promo__pag">
+            <button class="promo__pag-btn promo__pag-btn--left btn btn--pag btn--pag-left"><span class="visually-hidden">Previous slide</span></button>
+            <button class="promo__pag-btn btn btn--pag btn--pag-right btn--pag-disable"><span class="visually-hidden" disabled>Next slide</span></button>
+            <span class="promo__pag-number">03</span>
+          </nav>
+        </div>
       </section>
 
       <section class="features">
