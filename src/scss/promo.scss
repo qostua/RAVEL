@@ -1,0 +1,21 @@
+.promo {
+
+}
+.promo__banner {
+  padding: 282px 135px 398px;
+
+  background-color: #D6FFF9;
+  background-image: url("../img/css-main-banner@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+  	background-image: url(../img/css-main-banner@2x.jpg);
+  }
+}
+.promo__slogan {
+  margin-bottom: 75px;
+
+  font-weight: 700;
+
+  @include title-font;
+  @include font(84px, 112px);
+}
