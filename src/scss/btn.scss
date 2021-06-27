@@ -1,11 +1,52 @@
 .btn {
   padding: 17px 41.5px;
 
+  cursor: pointer;
   text-decoration: none;
 
   color: white;
+  border: none;
   background-color: $orange;
 
   @include title-font;
   @include font(18px, 25px);
+  @include active;
+}
+.btn--pag {
+  position: relative;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 47px;
+  height: 47px;
+  padding: 0;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    content: url("../img/arrow.svg");
+    transform: translate(-50%, -50%) rotate(180deg);
+
+    filter: brightness(0) invert(1);
+  }
+  &-right::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+
+    filter: brightness(1) invert(0);
+  }
+}
+.btn--pag-disable {
+  cursor: default;
+
+  border: 2px solid #F5EBE9;
+  background-color: transparent;
+  &:hover {
+    opacity: 1;
+  }
+}
+.btn--form {
+  padding: 20px 37px;
 }
