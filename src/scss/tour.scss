@@ -1,0 +1,136 @@
+.tour {
+  position: relative;
+
+  display: grid;
+
+  padding-top: 55px;
+
+  grid-template-columns: 570px 690px;
+  grid-gap: 150px;
+  justify-content: center;
+
+  &::before {
+    position: absolute;
+    bottom: 317px;
+    left: -10px;
+
+    box-sizing: border-box;
+    width: 54px;
+    height: 54px;
+
+    content: "";
+
+    border: 8px solid #FF5B65;
+    border-radius: 50%;
+  }
+  &::after {
+    position: absolute;
+    z-index: -2;
+    bottom: 44px;
+    left: 500px;
+
+    width: 216px;
+    height: 635px;
+
+    content: "";
+
+    background: #FFCBC4;
+
+    filter: blur(150px);
+  }
+}
+.tour__list-title-wrap {
+  padding-top: 43px;
+
+  order: 2;
+}
+.tour__title {
+  width: 690px;
+  margin-bottom: 76px;
+}
+.tour__list {
+
+}
+.tour__item {
+  padding: 50px 0 62px 90px;
+
+  border-bottom: 1px solid #F1E0DD;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.tour__item--services {
+  padding: 0 0 38px 90px;
+}
+.tour__item-title {
+  position: relative;
+
+  font-weight: 700;
+
+  @include title-font;
+  @include font(24px, 33px);
+  &::before {
+    position: absolute;
+    top: -8px;
+    left: -89px;
+
+    width: 50px;
+    height: 50px;
+
+    content: "";
+
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &--services::before {
+    background-color: $orange;
+    background-image: url("../img/tour-person-icon.svg");
+  }
+  &--world::before {
+    background-color: #EDFAE3;
+    background-image: url("../img/tour-world-icon.svg");
+  }
+  &--support::before {
+    background-color: #FFF8E3;
+    background-image: url("../img/tour-support-icon.svg");
+  }
+}
+.tour__item-text {
+  margin-top: 19px;
+
+  @include text;
+}
+.tour__pic {
+  position: relative;
+
+  order: 1;
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: -55px;
+    right: -55px;
+
+    width: 142px;
+    height: 142px;
+
+    content: "";
+
+    border-radius: 12px;
+    background-color: #FFCA45;
+  }
+  &::before {
+    position: absolute;
+    z-index: -1;
+    bottom: -61px;
+    left: -78px;
+
+    width: 169px;
+    height: 169px;
+
+    content: "";
+
+    background-image: url("../img/lighthouse-pattern.svg")
+  }
+}
