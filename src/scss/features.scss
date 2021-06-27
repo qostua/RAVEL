@@ -1,0 +1,78 @@
+.features__list {
+  display: grid;
+
+  grid-template-columns: repeat(4, 326px);
+  grid-gap: 30px;
+  justify-content: center;
+}
+.features__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 168px 36px 53px 40px;
+
+  background: #F8F8F8;
+
+  align-items: center;
+
+  &:hover {
+    background: #fff;
+
+    filter: drop-shadow(0px 12px 30px rgba(200, 180, 180, 0.2));
+  }
+
+  &::after {
+    position: absolute;
+    top: 30px;
+    left: 101px;
+
+    width: 128px;
+    height: 128px;
+
+    content: "";
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &--map::after {
+    background-image: url("../img/css-features-map@1x.png");
+    @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+    	background-image: url("../img/css-features-map@2x.png");
+    }
+  }
+  &--binocular::after {
+    background-image: url("../img/css-features-binocular@1x.png");
+    @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+    	background-image: url("../img/css-features-binocular@2x.png");
+    }
+  }
+  &--backpack::after {
+    background-image: url("../img/css-features-backpack@1x.png");
+    @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+    	background-image: url("../img/css-features-backpack@2x.png");
+    }
+  }
+  &--ukelele::after {
+    background-image: url("../img/css-features-ukelele@1x.png");
+    @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+    	background-image: url("../img/css-features-ukelele@2x.png");
+    }
+  }
+}
+.features__item-title {
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  font-weight: 700;
+
+  @include title-font;
+  @include font(24px, 33px);
+}
+.features__item-text {
+  text-align: center;
+
+  @include text;
+}
