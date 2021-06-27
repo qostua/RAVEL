@@ -52,3 +52,11 @@
 .btn--form {
   padding: 20px 37px;
 }
+.btn--plus {
+  padding: 10px 18px;
+
+  font-weight: 800;
+
+  @include title-font;
+  @include font(24px, 29px);
+}
