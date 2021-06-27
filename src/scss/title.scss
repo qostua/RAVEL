@@ -1,0 +1,9 @@
+.title {
+  font-weight: 800;
+
+  @include font(48px, 65px);
+  @include title-font;
+}
+.title__accent {
+  color: $orange;
+}
