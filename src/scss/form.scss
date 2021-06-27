@@ -1,0 +1,35 @@
+.form__input {
+  box-sizing: border-box;
+  width: 240px;
+  // padding: 5px 0;
+  height: 45px;
+  padding: 0;
+  padding-bottom: 5px;
+
+  color: $orange;
+  border: none;
+  border-bottom: 1px solid #F5EBE9;
+
+  font-weight: 600;
+
+  @include font(18px, 25px);
+  @include title-font;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form__select {
+  height: 45px;
+}
+.form__date::-webkit-calendar-picker-indicator {
+    right: 0;
+
+    display: block;
+
+    width: 40px;
+    height: 48px;
+
+    background: none;
+}
