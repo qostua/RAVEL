@@ -3,6 +3,8 @@
 
   background-color: #D6FFF9;
   background-image: url("../img/css-main-banner@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
   	background-image: url(../img/css-main-banner@2x.jpg);
