@@ -1,0 +1,142 @@
+.choose-destination {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -120px;
+    right: 68px;
+
+    width: 172px;
+    height: 172px;
+
+    content: "";
+
+    border-radius: 50%;
+    background: #ABF19F;
+
+    filter: blur(80px);
+  }
+}
+.choose-destination__title {
+  margin-bottom: 87px;
+
+  text-align: center;
+}
+.choose-destination__photos {
+  display: grid;
+
+  justify-content: center;
+  align-items: flex-start;
+  grid-template-columns: 450px 450px 450px;
+  grid-template-rows: 170px;
+  gap: 30px 30px;
+  grid-template-areas:
+    ". photo-2 ."
+    "photo-1 photo-2 photo-3"
+    "photo-1 btn photo-3";
+}
+.choose-destination__photo {
+  position: relative;
+
+  &:nth-child(1) {
+    grid-area: photo-1;
+
+    &::before {
+      position: absolute;
+      top: -200px;
+      right: 0;
+
+      width: 169px;
+      height: 169px;
+
+      content: "";
+
+      background-image: linear-gradient(-45deg, #EDF3FF 50%, transparent 50%);
+    }
+  }
+  &:nth-child(2) {
+    grid-area: photo-2;
+  }
+  &:nth-child(3) {
+    grid-area: photo-3;
+
+    &::before {
+      position: absolute;
+      top: -200px;
+      left: 0;
+
+      width: 148px;
+      height: 169px;
+
+      content: "";
+
+      border-top-right-radius: 100%;
+      background: #FFF4DE;
+    }
+  }
+  .choose-destination__img {
+    padding-bottom: 52px;
+  }
+}
+.choose-destination__item-info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+
+  box-sizing: border-box;
+  width: 400px;
+  padding: 20px 34px;
+
+  background: #fff;
+  box-shadow: 0px 10px 25px rgba(215, 190, 190, 0.2);
+
+  align-items: center;
+  gap: 22px;
+  justify-content: flex-start;
+}
+.choose-destination__item-title {
+  margin-bottom: 13px;
+
+  font-weight: 700;
+
+  @include title-font;
+  @include font(24px, 33px);
+}
+.choose-destination__item-inner {
+  display: flex;
+
+  justify-content: space-between;
+}
+.choose-destination__item-price {
+  color: $orange;
+
+  font-weight: bold;
+
+  @include font(18px, 22px);
+}
+.choose-destination__item-reviews {
+  position: relative;
+
+  color: $brown-light;
+
+  @include font(18px, 22px);
+  &::before {
+    position: absolute;
+    bottom: 8px;
+    left: -89px;
+
+    width: 82px;
+    height: 14px;
+
+    content: "";
+
+    background: url(../img/star-icon.svg);
+  }
+}
+.choose-destination__view-btn {
+  margin: 0 auto;
+
+  align-self: flex-end;
+  grid-area: btn;
+}
