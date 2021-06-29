@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>RAVEL</title>
+  </head>
+  <body class="page">
+    <header class="main-header page__main-header container">
+      <a href="index.html" class="main-header__logo logo__wrap link"><img class="logo" src="img/logo.svg" alt="RAVEL logo" width="174" height="45"></a>
+
+      <nav class="main-nav">
+        <ul class="main-nav__site-list">
+          <li class="main-nav__site-item"><a href="" class="main-nav__link link">Destination</a></li>
+          <li class="main-nav__site-item"><a href="" class="main-nav__link link">Offer</a></li>
+          <li class="main-nav__site-item"><a href="" class="main-nav__link link">Tour</a></li>
+          <li class="main-nav__site-item"><a href="" class="main-nav__link link">Blog</a></li>
+        </ul>
+      </nav>
+      <ul class="main-header__user-list">
+        <li class="main-header__user-item main-header__user-item--user"><a href="" class="main-header__link main-header__link--user link">My Account</a></li>
+        <li class="main-header__user-item"><a href="" class="main-header__link main-header__link--search link"><span class="visually-hidden">Search</span></a></li>
+      </ul>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">RAVEL</h1>
+
+      <section class="promo container page__promo">
+        <h2 class="visually-hidden">Promo Section</h2>
+
+        <div class="promo__banner">
+          <p class="promo__slogan">It’s Time To <br> Explore The World</p>
+          <a href="#" class="promo__plan-btn btn">Plan Your Trip</a>
+        </div>
+
+        <div class="promo__form-pag-wrap">
+          <form class="promo__form" action="https://echo.htmlacademy.ru/courses" method="post">
+            <h3 class="visually-hidden">Purchase Form</h3>
+            <p class="promo__input-wrap">
+              <label for="promo-form-top-destinations" class="promo__input-label">Destinations</label>
+              <select class="promo__select form__input form__select" name="top-destinations" id="promo-form-top-destinations">
+                <option value="arab-egypt">Arab Egypt</option>
+                <option value="spain">Spain</option>
+              </select>
+            </p>
+            <p class="promo__input-wrap promo__input-wrap--date">
+              <label for="promo-form-date" class="promo__input-label">Check In</label>
+              <input class="promo__date form__input form__date" type="date" name="date" id="promo-form-date" required>
+            </p>
+            <p class="promo__input-wrap promo__input-wrap--price">
+              <label for="promo-form-price" class="promo__input-label">Price Range</label>
+              <input class="promo__price form__input form__text" type="text" name="price" id="promo-form-price" value="$500 - $10,0000" required>
+            </p>
+            <button class="promo__form-btn btn btn--form" type="submit" name="submit">Discover Now</button>
+          </form>
+
+          <nav class="promo__pag">
+            <button class="promo__pag-btn promo__pag-btn--left btn btn--pag btn--pag-left"><span class="visually-hidden">Previous slide</span></button>
+            <button class="promo__pag-btn btn btn--pag btn--pag-right btn--pag-disable"><span class="visually-hidden" disabled>Next slide</span></button>
+            <span class="promo__pag-number">03</span>
+          </nav>
+        </div>
+      </section>
+
+      <section class="features page__features container">
+        <h2 class="visually-hidden">Our Features</h2>
+        <ul class="features__list">
+          <li class="features__item features__item--map">
+            <h3 class="features__item-title">Choose Destination</h3>
+            <p class="features__item-text">Lorem Ipsum is simply dummy text of the printing setting</p>
+          </li>
+          <li class="features__item features__item--binocular">
+            <h3 class="features__item-title">Explore The Place</h3>
+            <p class="features__item-text">Lorem Ipsum is simply dummy text of the printing setting</p>
+          </li>
+          <li class="features__item features__item--backpack">
+            <h3 class="features__item-title">Start Your Journey</h3>
+            <p class="features__item-text">Lorem Ipsum is simply dummy text of the printing setting</p>
+          </li>
+          <li class="features__item features__item--ukelele">
+            <h3 class="features__item-title">Let’s Enjoy</h3>
+            <p class="features__item-text">Lorem Ipsum is simply dummy text of the printing setting</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="top-destinations page__top-destinations">
+        <div class="container container--top-destinations">
+          <div class="top-destinations__info-wrap">
+            <h2 class="top-destinations__title title">Top <span class="title__accent">Destinations</span> In The World</h2>
+            <p class="top-destinations__text">It is a long established fact that a reader will be the distracted by the readable content of a page when looking at its layout from it.</p>
+
+            <a href="#" class="top-destinations__more-btn btn">Discover More</a>
+          </div>
+
+          <ul class="top-destinations__list">
+            <li class="top-destinations__item">
+              <picture class="top-destinations__pic" data-alt="Cuba City">
+                 <source type="image/webp" srcset="img/city-cuba@1x.webp, img/city-cuba@2x.webp 2x">
+
+                 <img class="top-destinations__item-img" src="img/city-cuba@1x.jpg" srcset="img/city-cuba@2x.jpg 2x" alt="Cuba City" width="330" height="400">
+              </picture>
+              <p class="visually-hidden">Cuba City</p>
+            </li>
+            <li class="top-destinations__item">
+              <picture class="top-destinations__pic" data-alt="Paris">
+                 <source type="image/webp" srcset="img/city-paris@1x.webp, img/city-paris@2x.webp 2x">
+
+                 <img class="top-destinations__item-img" src="img/city-paris@1x.jpg" srcset="img/city-paris@2x.jpg 2x" alt="Paris" width="330" height="400">
+              </picture>
+              <p class="visually-hidden">Paris</p>
+            </li>
+            <li class="top-destinations__item">
+              <picture class="top-destinations__pic" data-alt="Japan">
+                 <source type="image/webp" srcset="img/city-japan@1x.webp, img/city-japan@2x.webp 2x">
+
+                 <img class="top-destinations__item-img" src="img/city-japan@1x.jpg" srcset="img/city-japan@2x.jpg 2x" alt="Japan" width="316" height="400">
+              </picture>
+              <p class="visually-hidden">Japan</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="tour page__tour container">
+        <div class="tour__list-title-wrap">
+          <h2 class="tour__title title">We Offering In Total 793 Tours Out The World</h2>
+
+          <ul class="tour__list">
+            <li class="tour__item tour__item--services">
+              <h3 class="tour__item-title tour__item-title--services">Best Travel Guide Always For Your Services</h3>
+              <p class="tour__item-text">Travel has helped us to understandsa the meaning of life and it has helped us become better people. Each time we travel, we see the world with new eyes. Travel has helped us to understand the meaning of life</p>
+            </li>
+            <li class="tour__item tour__item">
+              <h3 class="tour__item-title tour__item-title--world">World Class Services Provide For You</h3>
+            </li>
+            <li class="tour__item tour__item">
+              <h3 class="tour__item-title tour__item-title--support">24/7 Strong Customer Support</h3>
+            </li>
+          </ul>
+        </div>
+
+        <picture class="tour__pic">
+           <source type="image/webp" srcset="img/lighthouse@1x.webp, img/lighthouse@2x.webp 2x">
+
+           <img class="tour-img" src="img/lighthouse@1x.jpg" srcset="img/lighthouse@2x.jpg 2x" alt="Lighthouse On Night" width="570" height="700">
+        </picture>
+      </section>
+
+      <section class="choose-destination page__choose-destination container">
+        <h2 class="choose-destination__title title">Choose Your Destination</h2>
+
+        <div class="choose-destination__photos">
+          <article class="choose-destination__photo">
+            <picture>
+               <source type="image/webp" srcset="img/place-sun@1x.webp, img/place-sun@2x.webp 2x">
+
+               <img class="choose-destination__img" src="img/place-sun@1x.jpg" srcset="img/place-sun@2x.jpg 2x" alt="Sun And Road" width="450" height="535">
+            </picture>
+            <div class="choose-destination__item-info">
+              <div class="choose-destination__item-info-inner">
+                <h3 class="choose-destination__item-title">Santorini, Oia Greece</h3>
+                <div class="choose-destination__item-inner">
+                  <p class="choose-destination__item-price">$2000</p>
+                  <p class="choose-destination__item-reviews">5k Reviews</p>
+                </div>
+              </div>
+              <button class="choose-destination__item-btn btn btn--plus" aria-label="add">+</button>
+            </div>
+          </article>
+          <article class="choose-destination__photo">
+            <picture>
+               <source type="image/webp" srcset="img/place-lighthouse@1x.webp, img/place-lighthouse@2x.webp 2x">
+
+               <img class="choose-destination__img" src="img/place-lighthouse@1x.jpg" srcset="img/place-lighthouse@2x.jpg 2x" alt="Lighthouse" width="450" height="535">
+            </picture>
+            <div class="choose-destination__item-info">
+              <div class="choose-destination__item-info-inner">
+                <h3 class="choose-destination__item-title">Santorini, Oia Greece</h3>
+                <div class="choose-destination__item-inner">
+                  <p class="choose-destination__item-price">$2000</p>
+                  <p class="choose-destination__item-reviews">5k Reviews</p>
+                </div>
+              </div>
+              <button class="choose-destination__item-btn btn btn--plus" aria-label="add">+</button>
+            </div>
+          </article>
+          <article class="choose-destination__photo">
+            <picture>
+               <source type="image/webp" srcset="img/place-house@1x.webp, img/place-house@2x.webp 2x">
+
+               <img class="choose-destination__img" src="img/place-house@1x.jpg" srcset="img/place-house@2x.jpg 2x" alt="China House" width="450" height="535">
+            </picture>
+            <div class="choose-destination__item-info">
+              <div class="choose-destination__item-info-inner">
+                <h3 class="choose-destination__item-title">Santorini, Oia Greece</h3>
+                <div class="choose-destination__item-inner">
+                  <p class="choose-destination__item-price">$2000</p>
+                  <p class="choose-destination__item-reviews">5k Reviews</p>
+                </div>
+              </div>
+              <button class="choose-destination__item-btn btn btn--plus" aria-label="add">+</button>
+            </div>
+          </article>
+
+          <button class="choose-destination__view-btn btn">View All Places</button>
+        </ul>
+      </section>
+
+      <section class="reviews page__reviews container">
+        <h2 class="reviews__title title">What Our Happy Customers Say About Us</h2>
+
+        <article class="reviews__slider">
+          <ul class="reviews__slider-list">
+            <li class="reviews__slider-item">
+              <div class="reviews__person">
+                <picture>
+                   <source type="image/webp" srcset="img/review-person-1@1x.webp, img/review-person-1@2x.webp 2x">
+
+                   <img class="choose-destination__img" src="img/review-person-1@1x.jpg" srcset="img/review-person-1@2x.jpg 2x" alt="Photo of Md Shamim Hossain" width="80" height="80">
+                </picture>
+                <div class="reviews__person-info">
+                  <p class="reviews__person-name">Md Shamim Hossain</p>
+                  <p class="reviews__person-occupation">UI/UX Designer</p>
+                </div>
+              </div>
+              <p class="reviews__text">Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.</p>
+            </li>
+          </ul>
+          <p class="reviews__slider-pag">
+            <button class="reviews__slider-pag-btn"><span class="visually-hidden">1</span></button>
+            <button class="reviews__slider-pag-btn"><span class="visually-hidden">2</span></button>
+            <button class="reviews__slider-pag-btn reviews__slider-pag-btn--active"><span class="visually-hidden">3</span></button>
+            <button class="reviews__slider-pag-btn"><span class="visually-hidden">4</span></button>
+          </p>
+        </article>
+
+        <div class="reviews__bubbles">
+          <div class="reviews__bubble"></div>
+          <div class="reviews__bubble"></div>
+          <div class="reviews__bubble"></div>
+          <div class="reviews__bubble"></div>
+          <div class="reviews__bubble"></div>
+          <div class="reviews__bubble"></div>
+          <div class="reviews__bubble"></div>
+        </div>
+      </section>
+
+      <article class="app page__app container">
+        <h2 class="app__title title">Download Now Travel Community Apps</h2>
+
+        <ul class="app__stores">
+          <li class="app__store"><a class="app__link app__link--google link" href="#"><span class="visually-hidden">Google Play</span></a></li>
+          <li class="app__store"><a class="app__link app__link--apple link" href="#"><span class="visually-hidden">App Store</span></a></li>
+        </ul>
+      </article>
+    </main>
+
+    <footer class="main-footer container">
+      <h2 class="visually-hidden">Copyright And Contacts</h2>
+      <div class="main-footer__column main-footer__column--main-info">
+        <a href="index.html" class="main-footer__logo logo__wrap link"><img class="logo" src="img/logo.svg" alt="RAVEL logo" width="231"></a>
+        <p class="main-footer__slogan">You can dream, create, design, and buildsa the most wonderful place.</p>
+        <ul class="main-footer__contacts-list">
+          <li class="main-footer__contacts-item main-footer__contacts-item--tel">+0123 456 987, +0123 456 987</li>
+          <li class="main-footer__contacts-item main-footer__contacts-item--email">yourmailaddress@gmail.com</li>
+          <li class="main-footer__contacts-item main-footer__contacts-item--site">www.yourwebsitename.com</li>
+        </ul>
+      </div>
+      <div class="main-footer__column  main-footer__column--quick">
+        <h3 class="main-footer__title">Quick Links</h3>
+        <ul class="main-footer__list">
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">About Us</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Destinations</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Latest Blog</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Our Team</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="main-footer__column  main-footer__column--support">
+        <h3 class="main-footer__title">Support</h3>
+        <ul class="main-footer__list">
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Customer Support</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Privacy & Policy</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Terms & Condition</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Forum</a></li>
+          <li class="main-footer__item"><a href="#" class="main-footer__item-link link">Tour Guid</a></li>
+        </ul>
+      </div>
+      <div class="main-footer__column  main-footer__column--newsletter">
+        <h3 class="main-footer__title main-footer__title--form">Newsletter</h3>
+        <form class="main-footer__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <p class="main-footer__input-wrap">
+            <label for="main-footer-email" class="visually-hidden">Email for newsletter</label>
+            <input class="form__input form__input--footer" type="email" name="email" id="main-footer-email" required>
+          </p>
+          <button class="btn" type="submit" name="subscribe">Subscribe Now</button>
+        </form>
+      </div>
+      <div class="main-footer__bottom-row">
+        <p class="main-footer__copy">Copyright @2020 Ravel. Designed By <span class="main-footer__copy-accent">Md Shamim Hossain</span></p>
+      </div>
+    </footer>
+  </body>
+</html>
