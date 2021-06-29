@@ -1,7 +1,6 @@
 .form__input {
   box-sizing: border-box;
   width: 240px;
-  // padding: 5px 0;
   height: 45px;
   padding: 0;
   padding-bottom: 5px;
@@ -19,7 +18,14 @@
     outline: none;
   }
 }
+.form__input--footer {
+  width: 400px;
+  height: 60px;
+  padding: 10px;
 
+  border: none;
+  background-color: #F8F8F8;
+}
 .form__select {
   height: 45px;
 }
