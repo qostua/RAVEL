@@ -1,0 +1,138 @@
+.reviews {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  &::before {
+    position: absolute;
+    top: -32.5px;
+    left: 10px;
+
+    width: 172px;
+    height: 172px;
+
+    content: "";
+
+    border-radius: 50%;
+    background: #9CD9EC;
+
+    filter: blur(80px);
+  }
+}
+.reviews__title {
+  width: 710px;
+  margin-bottom: 85px;
+
+  text-align: center;
+}
+.reviews__slider {
+  width: 690px;
+  padding: 60px 0 70px;
+
+  border-top: 12px solid $orange;
+  box-shadow: 0px 20px 30px rgba(227, 202, 202, 0.3);
+}
+.reviews__slider-item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.reviews__person {
+  display: flex;
+
+  width: 360px;
+  margin-bottom: 50px;
+}
+.reviews__person-info {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 20px;
+
+  justify-content: center;
+}
+.reviews__person-name {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+
+  @include font(24px, 33px);
+}
+.reviews__person-occupation {
+  color: $orange;
+
+  font-weight: 700;
+}
+.reviews__text {
+  width: 570px;
+  margin-bottom: 42px;
+
+  text-align: center;
+
+  @include text;
+  @include font(24px, 36px);
+}
+.reviews__slider-pag {
+  display: flex;
+
+  gap: 12px;
+  justify-content: center;
+}
+.reviews__slider-pag-btn {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+
+  cursor: pointer;
+
+  border: none;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+
+  @include active;
+}
+.reviews__slider-pag-btn--active {
+  background-color: $orange;
+  box-shadow: 0 0 0 2px $orange;
+  &:hover {
+    opacity: 1;
+  }
+}
+.reviews__bubbles {
+  position: relative;
+}
+@mixin bubble($bubble-nth, $bubble-width, $bubble-color, $bubble-bottom, $bubble-left) {
+  &:nth-child(#{$bubble-nth}) {
+    bottom: $bubble-bottom;
+    left: $bubble-left;
+
+    width: $bubble-width;
+    height: $bubble-width;
+
+    border-width: $bubble-width * 0.1;
+    border-color: $bubble-color;
+    background-image: url(../img/person-#{$bubble-nth}.jpg);
+  }
+}
+.reviews__bubble {
+  position: absolute;
+
+  box-sizing: border-box;
+
+  border-style: solid;
+  border-radius: 50%;
+  background: no-repeat center;
+
+  @include bubble(1, 74px, #FFCA45, 232px, 449px);
+  @include bubble(2, 56px, #FFCA45, 310px, -798px);
+  @include bubble(3, 94px, #FF4567, 216px, -556px);
+  @include bubble(4, 86px, #65CE54, 24px, 629px);
+  @include bubble(5, 86px, #5F45FF, 63px, -786px);
+  @include bubble(6, 92px, #18A0FB, 394px, 678px);
+  @include bubble(7, 54px, #C549FF, 423px, -616px);
+}
