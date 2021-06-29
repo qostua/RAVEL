@@ -1,0 +1,35 @@
+.app {
+  padding: 155px 134px;
+
+  background-image: url(../img/css-download-app-banner@1x.jpg);
+
+  @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+  	background-image: url(../img/css-download-app-banner@2x.jpg);
+  }
+}
+.app__title {
+  width: 620px;
+  margin-bottom: 49px;
+}
+.app__stores {
+  display: flex;
+
+  gap: 27px;
+}
+.app__link {
+  display: inline-block;
+
+  height: 60px;
+
+  border-radius: 5px;
+}
+.app__link--google {
+  width: 203px;
+
+  background-image: url(../img/store-google.svg);
+}
+.app__link--apple {
+  width: 199px;
+
+  background-image: url(../img/store-apple.svg);
+}
