@@ -18,20 +18,26 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^4.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
+    "jquery": "^3.6.0",
     "node-sass": "^6.0.0",
     "webpack": "^5.38.1",
     "webpack-stream": "^6.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel": "^6.23.0"
+  }
 }

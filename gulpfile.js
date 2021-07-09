@@ -18,9 +18,11 @@ const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 // const fs = require('fs');
 
+const concat = require('gulp-concat');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const uglify = require('gulp-uglify-es').default;
+
 
 const svgSprites = () => {
 	return src('./src/img/icon-*.svg')
@@ -80,7 +82,9 @@ const clean = () => {
 	return del(['app/*'])
 }
 const scripts = () => {
-	return src('./src/js/main.js')
+	return src([
+		'./src/js/main.js'
+	])
 		.pipe(webpackStream({
 			mode: 'development',
 			output: {
@@ -110,6 +114,19 @@ const scripts = () => {
 		.pipe(dest('./app/js'))
 		.pipe(browserSync.stream());
 }
+const scriptLibs = () => {
+	return src([
+		'libs/bower_components/jquery/dist/jquery.slim.min.js',
+		'libs/bower_components/air-datepicker/dist/js/datepicker.js',
+		'libs/jQuery-Select/js/jquery.nice-select.js',
+		'libs/jRange-master/jquery.range.js',
+		'src/js/libs.js'
+	])
+	.pipe(concat('libs.js'))
+	.pipe(uglify().on("error", notify.onError()))
+  .pipe(dest('app/js/'));
+}
+
 const fonts = () => {
   src('./src/fonts/**.{ttf,woff,woff2}')
 		.pipe(ttf2woff())
@@ -159,13 +176,15 @@ const watchFiles = () => {
     watch('./src/img/**.svg', svgSprites);
 		watch('./src/resources/**', resources);
 		watch('./src/fonts/**.{ttf,woff,woff2}', fonts);
-		watch('./src/js/**/*.js', scripts);
+		watch('./src/js/**/*.js', series(scripts, scriptLibs));
 }
 
 exports.styles = styles;
+exports.scriptLibs = scriptLibs;
 exports.watchFiles = watchFiles;
 exports.fileinclude = htmlInclude;
-exports.default = series(clean, parallel(htmlInclude, scripts, fonts, imgToApp, convertWebp, svgSprites, resources), styles, watchFiles);
+exports.default = series(parallel(htmlInclude, scripts, scriptLibs, fonts, svgSprites, resources), styles, watchFiles);
+// exports.default = series(clean, parallel(htmlInclude, scripts, scriptLibs, fonts, imgToApp, convertWebp, svgSprites, resources), styles, watchFiles);
 
 const stylesBuild = () => {
   return src('./src/scss/main.scss')
