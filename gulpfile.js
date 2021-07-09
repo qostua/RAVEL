@@ -183,8 +183,7 @@ exports.styles = styles;
 exports.scriptLibs = scriptLibs;
 exports.watchFiles = watchFiles;
 exports.fileinclude = htmlInclude;
-exports.default = series(parallel(htmlInclude, scripts, scriptLibs, fonts, svgSprites, resources), styles, watchFiles);
-// exports.default = series(clean, parallel(htmlInclude, scripts, scriptLibs, fonts, imgToApp, convertWebp, svgSprites, resources), styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scripts, scriptLibs, fonts, imgToApp, convertWebp, svgSprites, resources), styles, watchFiles);
 
 const stylesBuild = () => {
   return src('./src/scss/main.scss')
