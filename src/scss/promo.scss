@@ -106,3 +106,6 @@
     background-image: url("../img/calender-icon.svg");
   }
 }
+.promo__price:focus + .range-slider__container {
+  display: block;
+}

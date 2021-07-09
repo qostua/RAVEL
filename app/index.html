@@ -37,21 +37,26 @@
         <div class="promo__form-pag-wrap">
           <form class="promo__form" action="https://echo.htmlacademy.ru/courses" method="post">
             <h3 class="visually-hidden">Purchase Form</h3>
-            <p class="promo__input-wrap">
+            <div class="promo__input-wrap">
               <label for="promo-form-top-destinations" class="promo__input-label">Destinations</label>
-              <select class="promo__select form__input form__select" name="top-destinations" id="promo-form-top-destinations">
+              <select class="promo__select form__input nice-select wide" name="top-destinations" id="promo-form-top-destinations">
                 <option value="arab-egypt">Arab Egypt</option>
                 <option value="spain">Spain</option>
+                <option value="russia">Russia</option>
+                <option value="usa">USA</option>
               </select>
-            </p>
-            <p class="promo__input-wrap promo__input-wrap--date">
+            </div>
+            <div class="promo__input-wrap promo__input-wrap--date">
               <label for="promo-form-date" class="promo__input-label">Check In</label>
-              <input class="promo__date form__input form__date" type="date" name="date" id="promo-form-date" required>
-            </p>
-            <p class="promo__input-wrap promo__input-wrap--price">
+              <input class="promo__date form__input form__date datepicker-here" type="text" name="date" id="promo-form-date" required value="01 Feb, 2021">
+            </div>
+            <div class="promo__input-wrap promo__input-wrap--price">
               <label for="promo-form-price" class="promo__input-label">Price Range</label>
               <input class="promo__price form__input form__text" type="text" name="price" id="promo-form-price" value="$500 - $10,0000" required>
-            </p>
+              <div class="range-slider__container">
+                <input type="hidden" class="range-slider" value="10000">
+              </div>
+            </div>
             <button class="promo__form-btn btn btn--form" type="submit" name="submit">Discover Now</button>
           </form>
 
@@ -302,5 +307,6 @@
         <p class="main-footer__copy">Copyright @2020 Ravel. Designed By <span class="main-footer__copy-accent">Md Shamim Hossain</span></p>
       </div>
     </footer>
+    <script src="js/libs.js" charset="utf-8"></script>
   </body>
 </html>

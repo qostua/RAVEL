@@ -2,3 +2,8 @@ layout/
 node_modules/
 app/
 libs/
+<<<<<<< HEAD
+=======
+.gitignore
+package-lock.json
+>>>>>>> form-style
