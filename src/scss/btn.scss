@@ -36,8 +36,6 @@
   }
   &-right::after {
     transform: translate(-50%, -50%) rotate(0deg);
-
-    filter: brightness(1) invert(0);
   }
 }
 .btn--pag-disable {
@@ -47,6 +45,9 @@
   background-color: transparent;
   &:hover {
     opacity: 1;
+  }
+  &::after {
+    filter: brightness(1) invert(0);
   }
 }
 .btn--form {
