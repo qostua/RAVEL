@@ -5,17 +5,20 @@
   padding: 0;
   padding-bottom: 5px;
 
+  vertical-align: middle;
+
   color: $orange;
   border: none;
   border-bottom: 1px solid #F5EBE9;
 
   font-weight: 600;
 
-  @include font(18px, 25px);
+  @include font(18px, 40px);
   @include title-font;
 
   &:focus {
     outline: none;
+    border-bottom: 1px solid $orange;
   }
 }
 .form__input--footer {
