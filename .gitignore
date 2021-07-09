@@ -1,3 +1,6 @@
 layout/
 node_modules/
 app/
+libs/
+.gitignore
+package-lock.json
