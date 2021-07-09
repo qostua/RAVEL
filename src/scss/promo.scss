@@ -2,12 +2,41 @@
   padding: 282px 135px 381px;
 
   background-color: #D6FFF9;
-  background-image: url("../img/css-main-banner@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
-  	background-image: url(../img/css-main-banner@2x.jpg);
+  &--1 {
+    background-image: url("../img/css-main-banner-1@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+    	background-image: url(../img/css-main-banner-1@2x.jpg);
+    }
+
+    .promo__slogan--1 {
+      display: block;
+    }
+  }
+  &--2 {
+    background-image: url("../img/css-main-banner-2@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+    	background-image: url(../img/css-main-banner-2@2x.jpg);
+    }
+
+    .promo__slogan--2 {
+      display: block;
+    }
+  }
+  &--3 {
+    background-image: url("../img/css-main-banner-3@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (css-min-resolution: $retina-dppx) {
+    	background-image: url(../img/css-main-banner-3@2x.jpg);
+    }
+
+    .promo__slogan--3 {
+      display: block;
+    }
   }
 }
 .promo__slogan {
@@ -17,6 +46,8 @@
 
   @include title-font;
   @include font(84px, 112px);
+
+  display: none;
 }
 .promo__form-pag-wrap {
   display: grid;
