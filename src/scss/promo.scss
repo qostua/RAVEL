@@ -79,6 +79,7 @@
   @include font(16px, 20px);
 }
 .promo__input-wrap--price {
+  width: 240px;
   position: relative;
 
   &::after {
@@ -105,4 +106,7 @@
 
     background-image: url("../img/calender-icon.svg");
   }
+}
+.promo__price:focus + .range-slider__container {
+  display: block;
 }
