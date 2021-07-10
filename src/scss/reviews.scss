@@ -58,7 +58,14 @@
   flex-direction: column;
 
   align-items: center;
+
+  display: none;
+
+  &--show {
+    display: flex;
+  }
 }
+
 .reviews__person {
   display: flex;
 
