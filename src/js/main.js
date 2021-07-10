@@ -51,3 +51,35 @@ bannerBtnNext.onclick = function() {
     bannerBtnPrevious.classList.remove('btn--pag-disable');
   }
 };
+
+let reviewsBtns = document.querySelectorAll('.reviews__slider-pag-btn');
+let reviews = document.querySelectorAll('.reviews__slider-item');
+
+let makeAllReviewsBtnsDisable = function() {
+  for (let reviewsBtn of reviewsBtns) {
+    reviewsBtn.classList.remove('reviews__slider-pag-btn--active');
+  }
+};
+
+let showReview = function(num) {
+  reviews[num].classList.add('reviews__slider-item--show');
+};
+
+let hideReview = function() {
+  for (let review of reviews) {
+    review.classList.remove('reviews__slider-item--show');
+  }
+};
+
+let makeReviewsBtnActive = function(reviewsBtn, i) {
+  reviewsBtn.addEventListener('click', function () {
+    makeAllReviewsBtnsDisable()
+    reviewsBtn.classList.add('reviews__slider-pag-btn--active');
+    hideReview();
+    showReview(i);
+  });
+};
+
+for (let i = 0; i < reviewsBtns.length; i++) {
+  makeReviewsBtnActive(reviewsBtns[i], i);
+}
