@@ -29,8 +29,10 @@
       <section class="promo container page__promo">
         <h2 class="visually-hidden">Promo Section</h2>
 
-        <div class="promo__banner">
-          <p class="promo__slogan">It’s Time To <br> Explore The World</p>
+        <div class="promo__banner promo__banner--3">
+          <p class="promo__slogan promo__slogan--1">You will visit <br> extraordinary places</p>
+          <p class="promo__slogan promo__slogan--2">Wonderful sensations <br> await you</p>
+          <p class="promo__slogan promo__slogan--3">It’s Time To <br> Explore The World</p>
           <a href="#" class="promo__plan-btn btn">Plan Your Trip</a>
         </div>
 
@@ -61,8 +63,8 @@
           </form>
 
           <nav class="promo__pag">
-            <button class="promo__pag-btn promo__pag-btn--left btn btn--pag btn--pag-left"><span class="visually-hidden">Previous slide</span></button>
-            <button class="promo__pag-btn btn btn--pag btn--pag-right btn--pag-disable"><span class="visually-hidden" disabled>Next slide</span></button>
+            <button class="promo__pag-btn promo__pag-btn--left promo__pag-btn--left btn btn--pag btn--pag-left"><span class="visually-hidden">Previous slide</span></button>
+            <button class="promo__pag-btn promo__pag-btn--right btn btn--pag btn--pag-right btn--pag-disable"><span class="visually-hidden">Next slide</span></button>
             <span class="promo__pag-number">03</span>
           </nav>
         </div>
@@ -210,7 +212,7 @@
           </article>
 
           <button class="choose-destination__view-btn btn">View All Places</button>
-        </ul>
+        </div>
       </section>
 
       <section class="reviews page__reviews container">
@@ -226,11 +228,53 @@
                    <img class="choose-destination__img" src="img/review-person-1@1x.jpg" srcset="img/review-person-1@2x.jpg 2x" alt="Photo of Md Shamim Hossain" width="80" height="80">
                 </picture>
                 <div class="reviews__person-info">
+                  <p class="reviews__person-name">Kostya Mayer</p>
+                  <p class="reviews__person-occupation">Frontend Developer</p>
+                </div>
+              </div>
+              <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra augue at ultrices porta. Nam non cursus justo, vitae mattis tellus. Phasellus posuere id elit sed egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+            </li>
+            <li class="reviews__slider-item">
+              <div class="reviews__person">
+                <picture>
+                   <source type="image/webp" srcset="img/review-person-2@1x.webp, img/review-person-2@2x.webp 2x">
+
+                   <img class="choose-destination__img" src="img/review-person-2@1x.jpg" srcset="img/review-person-2@2x.jpg 2x" alt="Photo of Md Shamim Hossain" width="80" height="80">
+                </picture>
+                <div class="reviews__person-info">
+                  <p class="reviews__person-name">Oleg Ivanov</p>
+                  <p class="reviews__person-occupation">Backend Developer</p>
+                </div>
+              </div>
+              <p class="reviews__text">Nam laoreet convallis diam ut volutpat. Mauris metus leo, sollicitudin et efficitur in, tincidunt in lacus. Nunc ut porta odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec pharetra dapibus leo.</p>
+            </li>
+            <li class="reviews__slider-item reviews__slider-item--show">
+              <div class="reviews__person">
+                <picture>
+                   <source type="image/webp" srcset="img/review-person-3@1x.webp, img/review-person-3@2x.webp 2x">
+
+                   <img class="choose-destination__img" src="img/review-person-3@1x.jpg" srcset="img/review-person-3@2x.jpg 2x" alt="Photo of Md Shamim Hossain" width="80" height="80">
+                </picture>
+                <div class="reviews__person-info">
                   <p class="reviews__person-name">Md Shamim Hossain</p>
                   <p class="reviews__person-occupation">UI/UX Designer</p>
                 </div>
               </div>
               <p class="reviews__text">Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.</p>
+            </li>
+            <li class="reviews__slider-item">
+              <div class="reviews__person">
+                <picture>
+                   <source type="image/webp" srcset="img/review-person-4@1x.webp, img/review-person-4@2x.webp 2x">
+
+                   <img class="choose-destination__img" src="img/review-person-4@1x.jpg" srcset="img/review-person-4@2x.jpg 2x" alt="Photo of Md Shamim Hossain" width="80" height="80">
+                </picture>
+                <div class="reviews__person-info">
+                  <p class="reviews__person-name">Anton Petrov</p>
+                  <p class="reviews__person-occupation">UI/UX Designer</p>
+                </div>
+              </div>
+              <p class="reviews__text">Donec non tempus nunc, et consectetur mi. Donec a tristique ex, eget hendrerit leo. Quisque eget dui eu est imperdiet semper dapibus quis lacus. Duis dictum massa felis, id sodales eros consectetur finibus. Lorem ipsum dolor sit amet.</p>
             </li>
           </ul>
           <p class="reviews__slider-pag">
@@ -308,5 +352,6 @@
       </div>
     </footer>
     <script src="js/libs.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
